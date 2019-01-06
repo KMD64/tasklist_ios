@@ -23,31 +23,31 @@ class AddTodoController: UITableViewController{
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func cancelButton(sender: AnyObject) {
+    @IBAction func cancelButton(_ sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion:nil)
+        dismiss(animated: true, completion:nil)
     }
-    @IBAction func okButton(sender: AnyObject) {
+    @IBAction func okButton(_ sender: AnyObject) {
         if(todo_delegate != nil){
             todo_delegate?.setValues(index, todo_text: text_todo.text)
         }
-        dismissViewControllerAnimated(true, completion:nil)
+        dismiss(animated: true, completion:nil)
         
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projectlist.count
     }
     
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell=table_outlet.dequeueReusableCellWithIdentifier("project2")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell=table_outlet.dequeueReusableCell(withIdentifier: "project2")
             cell?.textLabel?.text=projectlist[indexPath.row].title
         return cell!
     }
-    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         index = indexPath.row
     }
     

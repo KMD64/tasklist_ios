@@ -7,7 +7,9 @@
 //
 
 import Foundation
-class Project{
+
+
+final class Project:ResponseObjectSerializable,ResponseCollectionSerializable{
     var id:Int
     var title:String
     var todos:Array<Todo>
@@ -15,9 +17,35 @@ class Project{
         self.id=id
         self.title=t
         self.todos=[]
-  		  }
+    }
+    //implementation
+    required init?(response:HTTPURLResponse,representation:Any){
+        
+            let representation=representation as? [String:Any]
+            let id=representation?["id"] as? Int
+            let title=representation?["title"] as? String
+        
+        self.id=id!
+        self.title=title!
+        self.todos=[]
+    }
+    
+    static func collection(from response: HTTPURLResponse, withRepresentation representation: Any) -> [Project] {
+        var collection: [Project] = []
+        
+        if let representation = representation as? [[String: Any]] {
+            for itemRepresentation in representation {
+                if let item = Project(response: response, representation: itemRepresentation) {
+                    collection.append(item)
+                }
+            }
+        }
+        
+        return collection
+    }
+    
 }
-class Todo{
+final class Todo:ResponseObjectSerializable,ResponseCollectionSerializable{
     var text:String
     var id:Int
     var project_id:Int
@@ -28,4 +56,32 @@ class Todo{
         self.text=t
         self.is_completed=is_completed
     }
-}
+    
+    required init?(response:HTTPURLResponse,representation:Any){
+        NSLog("Responsing Todo")
+            let representation=representation as? [String:Any]
+            let id=representation?["id"] as? Int
+            let text=representation?["text"] as? String
+            let project_id=representation?["project_id"] as? Int
+            let is_completed=representation?["isCompleted"] as? Bool
+        NSLog("ID:\(id)")
+        NSLog("Text:\(text)")
+        NSLog("Is completed:\(is_completed)")
+        self.id=id!
+        self.text=text!
+        self.project_id=project_id!
+        self.is_completed=is_completed!
+    }
+    static func collection(from response: HTTPURLResponse, withRepresentation representation: Any) -> [Todo] {
+        var collection: [Todo] = []
+        
+        if let representation = representation as? [[String: Any]] {
+            for itemRepresentation in representation {
+                if let item = Todo(response: response, representation: itemRepresentation) {
+                    collection.append(item)
+                }
+            }
+        }
+        
+        return collection
+    }}

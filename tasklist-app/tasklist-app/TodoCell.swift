@@ -6,6 +6,7 @@
 //  Copyright © 2019 maxwell. All rights reserved.
 //
 import UIKit
+import Alamofire
 class TodoCell: UITableViewCell, M13CheckboxDelegate{
     
     var id=0
@@ -17,14 +18,19 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
         // Initialization code
         
     }
-    func m13CheckboxStateChangeTo(state: M13CheckboxState) {
+    func m13CheckboxStateChange(to state: M13CheckboxState) {
             NSLog("Click!")
-    }
-    func setContent(todo:Todo){
-        label_outlet.text=todo.text
+        NSLog(Alamofire.request("https://maxwell-tasklist.herokuapp.com/update", method:.post, parameters: ["todo_id":id], encoding: JSONEncoding.default, headers: nil).response.debugDescription)
         
     }
-    override func setSelected(selected: Bool, animated: Bool) {
+    func setContent(_ todo:Todo){
+        id=todo.id
+        label_outlet.text=todo.text
+        if todo.is_completed {
+        checkbox_outlet.checkState = M13CheckboxStateChecked
+        }
+    }
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
