@@ -10,12 +10,11 @@ import UIKit
 
 
 class AddTodoController: UITableViewController{
-    @IBOutlet weak var text_todo: UITextField!
     @IBOutlet var table_outlet: UITableView!
     var todo_delegate:TodoDelegate?
+    var textcell:TodoTextCell?=nil
     var projectlist:[Project]=[]
     var index:Int = 0;//Default item
-    var status=0;//canceled
     override func viewDidLoad() {
         super.viewDidLoad()
         table_outlet.delegate=self
@@ -29,25 +28,66 @@ class AddTodoController: UITableViewController{
     }
     @IBAction func okButton(_ sender: AnyObject) {
         if(todo_delegate != nil){
-            todo_delegate?.setValues(index, todo_text: text_todo.text)
+            todo_delegate?.setValues(index, todo_text: textcell?.getText())
         }
         dismiss(animated: true, completion:nil)
         
     }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return projectlist.count
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
-    
-    
-    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var cell:UITableViewCell? = nil
+        if section==0 {
+            cell=getCaptionView(s: "Задача")
+        }
+        else{
+            cell=getCaptionView(s: "Категория")
+        }
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 64
+    }
+    func getCaptionView(s:String)->UITableViewCell?{
+        let cell=table_outlet.dequeueReusableCell(withIdentifier: "todo_label")
+        cell?.textLabel?.text=s
+        cell?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:14.0)
+        return cell
+    }
+    override func tableView(_ _tableView:UITableView, numberOfRowsInSection section:Int)->Int{
+        if section==0{
+            return 1
+        }
+        else{
+            return projectlist.count
+        }
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=table_outlet.dequeueReusableCell(withIdentifier: "project2")
+        var cell:UITableViewCell?=nil
+        switch indexPath.section{
+        case 0:
+            textcell=table_outlet.dequeueReusableCell(withIdentifier:"todo_text_cell") as! TodoTextCell
+            cell=textcell
+            break
+        case 1:
+            cell=table_outlet.dequeueReusableCell(withIdentifier: "project2")
             cell?.textLabel?.text=projectlist[indexPath.row].title
+            break
+        default:
+            break
+        }
+
         return cell!
     }
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section != 1 {return false}
+        return true
+    }
     override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        
         index = indexPath.row
     }
     

@@ -15,6 +15,7 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
     override func awakeFromNib() {
         super.awakeFromNib()
         checkbox_outlet.delegate=self
+        checkbox_outlet.flat=true
         // Initialization code
         
     }

@@ -6,8 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Задачи-->
         <scene sceneID="ib6-Kc-0mP">
@@ -26,7 +32,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96855324506759644" green="0.96866911649703979" blue="0.96851390600204468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" header="YES"/>
                                     <bool key="isElement" value="YES"/>
@@ -39,17 +45,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQ9-ud-nKi" customClass="M13Checkbox">
-                                            <rect key="frame" x="8" y="10" width="40" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-0c-Kxa">
-                                            <rect key="frame" x="56" y="20" width="297" height="21"/>
+                                            <rect key="frame" x="93" y="20" width="260" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQ9-ud-nKi" customClass="M13Checkbox">
+                                            <rect key="frame" x="26" y="10" width="40" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration">
@@ -83,11 +89,13 @@
         <scene sceneID="9qW-F5-neY">
             <objects>
                 <navigationController id="cAh-H3-KmM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oK0-X4-vlD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oK0-X4-vlD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.1992347538" green="0.68729680780000002" blue="0.85564380880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1992347538" green="0.68729680780000002" blue="0.85564380880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
                             <color key="textColor" red="0.99941492080688477" green="0.97675275802612305" blue="0.99462240934371948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -99,48 +107,69 @@
             </objects>
             <point key="canvasLocation" x="-14" y="148"/>
         </scene>
-        <!--Добавление задачи-->
+        <!--Новая задача-->
         <scene sceneID="XK2-MJ-hHS">
             <objects>
                 <tableViewController id="5Wj-9D-nyo" customClass="AddTodoController" customModule="tasklist_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="t38-qZ-4Jl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="t38-qZ-4Jl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Vz1-5m-fu9">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Описание задачи" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jWi-Qo-53g">
-                                    <rect key="frame" x="4" y="7" width="592" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project2" id="ifC-ZP-L9M">
-                                <rect key="frame" x="0.0" y="71" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="todo_label" rowHeight="37" id="0tc-WW-Wjw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ifC-ZP-L9M" id="mUA-jd-SjP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0tc-WW-Wjw" id="GuP-Nw-3e5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97247451543807983" green="0.9725908637046814" blue="0.97243505716323853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="todo_text_cell" rowHeight="74" id="ADo-IL-u6r" customClass="TodoTextCell" customModule="tasklist_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="65" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ADo-IL-u6r" id="kUY-v4-sjv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Название задачи..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-G9-VUP">
+                                            <rect key="frame" x="8" y="22" width="359" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cMf-G9-VUP" firstAttribute="top" secondItem="kUY-v4-sjv" secondAttribute="topMargin" constant="14" id="43U-O7-P2R"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cMf-G9-VUP" secondAttribute="bottom" constant="14" id="uy8-Yv-Nmh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="text_field" destination="cMf-G9-VUP" id="ZF8-02-kLy"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project2" rowHeight="58" id="ifC-ZP-L9M">
+                                <rect key="frame" x="0.0" y="139" width="375" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="ifC-ZP-L9M" id="mUA-jd-SjP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Добавление задачи" id="4eU-ua-WHI">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="olt-70-I4J">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <navigationItem key="navigationItem" title="Новая задача" id="4eU-ua-WHI">
+                        <barButtonItem key="leftBarButtonItem" image="backIcon" id="olt-70-I4J">
+                            <inset key="imageInsets" minX="0.0" minY="7" maxX="24" maxY="7"/>
+                            <color key="tintColor" red="0.97247451539999996" green="0.97259086370000003" blue="0.97243505720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="5Wj-9D-nyo" id="JQf-qt-1nl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Rdv-IB-Rdg">
-                            <color key="tintColor" red="0.99941492080688477" green="0.97675275802612305" blue="0.99462240934371948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="done" id="Rdv-IB-Rdg">
+                            <inset key="imageInsets" minX="40" minY="16" maxX="0.0" maxY="16"/>
+                            <color key="tintColor" red="0.97247451539999996" green="0.97259086370000003" blue="0.97243505720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="okButton:" destination="5Wj-9D-nyo" id="037-Xa-ByT"/>
                             </connections>
@@ -148,23 +177,22 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table_outlet" destination="t38-qZ-4Jl" id="J3q-T4-fZX"/>
-                        <outlet property="text_todo" destination="jWi-Qo-53g" id="z0M-aG-a3A"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kif-oN-rsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400" y="903"/>
+            <point key="canvasLocation" x="1399.2" y="902.69865067466276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ptU-kB-0Cb">
             <objects>
-                <navigationController id="WeL-uy-1GC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hS6-c0-Ghi">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="WeL-uy-1GC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hS6-c0-Ghi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.19923475384712219" green="0.68729680776596069" blue="0.85564380884170532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
                             <color key="textColor" red="0.99941492080688477" green="0.97675275802612305" blue="0.99462240934371948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -177,4 +205,8 @@
             <point key="canvasLocation" x="1400" y="148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backIcon" width="45" height="30"/>
+        <image name="done" width="59" height="46"/>
+    </resources>
 </document>

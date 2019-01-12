@@ -25,7 +25,7 @@ class TodosController: UITableViewController,TodoDelegate {
                 self.tableView.reloadData()
             }
         }
-        //projects_list[position].todos.append(Todo(id:0,project_id:projects_list[position].id,t:todotext_fix,is_completed:false))
+    
         //send create request
         
         
