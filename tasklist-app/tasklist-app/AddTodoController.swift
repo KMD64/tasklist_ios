@@ -41,20 +41,27 @@ class AddTodoController: UITableViewController{
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var cell:UITableViewCell? = nil
         if section==0 {
-            cell=getCaptionView(s: "Задача")
+            cell=createCaptionView(s: "Задача")
         }
         else{
-            cell=getCaptionView(s: "Категория")
+            cell=createCaptionView(s: "Категория")
         }
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 64
     }
-    func getCaptionView(s:String)->UITableViewCell?{
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section==0{
+            return 80
+        }
+        return 72
+    }
+    func createCaptionView(s:String)->UITableViewCell?{
         let cell=table_outlet.dequeueReusableCell(withIdentifier: "todo_label")
         cell?.textLabel?.text=s
-        cell?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:14.0)
+        cell?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:18.0)
+        
         return cell
     }
     override func tableView(_ _tableView:UITableView, numberOfRowsInSection section:Int)->Int{

@@ -16,6 +16,11 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
         super.awakeFromNib()
         checkbox_outlet.delegate=self
         checkbox_outlet.flat=true
+        checkbox_outlet.tintColor=Colors.main_color
+        checkbox_outlet.checkColor=Colors.background_color
+        checkbox_outlet.strokeColor=Colors.stroke_color
+        checkbox_outlet.radius=0
+        checkbox_outlet.contentScaleFactor=0.7
         // Initialization code
         
     }

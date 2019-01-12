@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		304F65D1ED5E46B16F495FC7 /* Pods_tasklist_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCB91E134808760F1AF3CD9 /* Pods_tasklist_appTests.framework */; };
 		B99A25C7618EC2EEE02183C0 /* Pods_tasklist_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D30DFD9D928EBECF3DA02B /* Pods_tasklist_app.framework */; };
+		CF1DD5A221EA767A00363D49 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DD5A121EA767A00363D49 /* Colors.swift */; };
 		CF354B7721E198AA00904042 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */; };
-		CF6A3B2A21EA28A500F0D907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6A3B2921EA28A500F0D907 /* Assets.xcassets */; };
+		CF77585621EA68F900830D82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF77585521EA68F900830D82 /* Assets.xcassets */; };
 		CF77D80C21E230D1006A9FCE /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */; };
 		CFB451E221E9ECFE00538A3C /* TodoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */; };
 		CFC48D5621E0F0D800DE82EA /* tasklist_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC48D5521E0F0D800DE82EA /* tasklist_appTests.swift */; };
@@ -23,6 +24,8 @@
 		CFDD030621E10133000F3FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDD030521E10133000F3FE1 /* Main.storyboard */; };
 		CFDD032B21E1285B000F3FE1 /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDD032A21E1285B000F3FE1 /* M13Checkbox.m */; };
 		CFDD96E621E1688300054DF3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CFDD96E521E1688300054DF3 /* Podfile */; };
+		CFF4140A21EA6BA700B1C496 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CFF4140821EA6BA700B1C496 /* fonts */; };
+		CFF4140B21EA6BA700B1C496 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CFF4140921EA6BA700B1C496 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,9 @@
 		6645BABEAEDB0ACE3C4650F4 /* Pods-tasklist-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasklist-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-tasklist-app/Pods-tasklist-app.release.xcconfig"; sourceTree = "<group>"; };
 		6DC34CCBCD051AD66DC1A200 /* Pods-tasklist-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasklist-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tasklist-appTests/Pods-tasklist-appTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DCB91E134808760F1AF3CD9 /* Pods_tasklist_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tasklist_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1DD5A121EA767A00363D49 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
-		CF6A3B2921EA28A500F0D907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF77585521EA68F900830D82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
 		CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTextCell.swift; sourceTree = "<group>"; };
 		CFC48D3A21E0F0D800DE82EA /* tasklist-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tasklist-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,8 @@
 		CFDD032921E1285B000F3FE1 /* M13Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13Checkbox.h; sourceTree = "<group>"; };
 		CFDD032A21E1285B000F3FE1 /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
 		CFDD96E521E1688300054DF3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CFF4140821EA6BA700B1C496 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		CFF4140921EA6BA700B1C496 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		E7CCC74266665D385526AF3F /* Pods-tasklist-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasklist-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tasklist-app/Pods-tasklist-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +147,9 @@
 		CFC48D3C21E0F0D800DE82EA /* tasklist-app */ = {
 			isa = PBXGroup;
 			children = (
-				CF6A3B2921EA28A500F0D907 /* Assets.xcassets */,
+				CFF4140821EA6BA700B1C496 /* fonts */,
+				CFF4140921EA6BA700B1C496 /* images */,
+				CF77585521EA68F900830D82 /* Assets.xcassets */,
 				CFDD032921E1285B000F3FE1 /* M13Checkbox.h */,
 				CFDD032A21E1285B000F3FE1 /* M13Checkbox.m */,
 				CFDD030A21E10254000F3FE1 /* tasklist-app-Bridging-Header.h */,
@@ -156,6 +164,7 @@
 				CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */,
 				CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */,
 				CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */,
+				CF1DD5A121EA767A00363D49 /* Colors.swift */,
 			);
 			path = "tasklist-app";
 			sourceTree = "<group>";
@@ -256,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF4140B21EA6BA700B1C496 /* images in Resources */,
 				CFDD96E621E1688300054DF3 /* Podfile in Resources */,
-				CF6A3B2A21EA28A500F0D907 /* Assets.xcassets in Resources */,
+				CF77585621EA68F900830D82 /* Assets.xcassets in Resources */,
 				CFDD030621E10133000F3FE1 /* Main.storyboard in Resources */,
+				CFF4140A21EA6BA700B1C496 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF77D80C21E230D1006A9FCE /* ResponseCollectionSerializable.swift in Sources */,
+				CF1DD5A221EA767A00363D49 /* Colors.swift in Sources */,
 				CF354B7721E198AA00904042 /* ResponseObjectSerializable.swift in Sources */,
 				CFDD02FC21E1012A000F3FE1 /* AppDelegate.swift in Sources */,
 				CFDD030321E1012A000F3FE1 /* TodoCell.swift in Sources */,
