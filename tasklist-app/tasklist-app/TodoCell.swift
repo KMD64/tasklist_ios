@@ -20,21 +20,37 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
         checkbox_outlet.checkColor=Colors.background_color
         checkbox_outlet.strokeColor=Colors.stroke_color
         checkbox_outlet.radius=0
-        checkbox_outlet.contentScaleFactor=0.7
+        
         // Initialization code
         
     }
     func m13CheckboxStateChange(to state: M13CheckboxState) {
-            NSLog("Click!")
+        let s = label_outlet.attributedText as! NSMutableAttributedString
+        label_outlet.attributedText=nil
+        if(state==M13CheckboxStateChecked){
+            s.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, s.length))
+            
+        }
+        else{
+            s.removeAttribute(NSStrikethroughStyleAttributeName,range: NSMakeRange(0,s.length))
+    
+        }
+        label_outlet.attributedText=s
         NSLog(Alamofire.request("https://maxwell-tasklist.herokuapp.com/update", method:.post, parameters: ["todo_id":id], encoding: JSONEncoding.default, headers: nil).response.debugDescription)
+        
         
     }
     func setContent(_ todo:Todo){
         id=todo.id
-        label_outlet.text=todo.text
+        //needs for strikethrough
+        let s = NSMutableAttributedString(string:todo.text)
+        s.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.black, range: NSMakeRange(0,s.length))
         if todo.is_completed {
-        checkbox_outlet.checkState = M13CheckboxStateChecked
+            checkbox_outlet.checkState = M13CheckboxStateChecked
+            s.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0,s.length))
         }
+        label_outlet.attributedText=s
+
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -47,7 +47,8 @@ class TodosController: UITableViewController,TodoDelegate {
     
     override func tableView(_ tableView:UITableView,viewForHeaderInSection section:Int)->UIView?{
         let header=tableView.dequeueReusableCell(withIdentifier: "header")
-        header?.textLabel?.text=projects_list[section].title
+        header?.textLabel?.text=projects_list[section].title.localizedCapitalized
+        header?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:16.0)
         header?.textLabel?.textColor=UIColor(red: 1, green: 1, blue: 1, alpha: 0)
         return header
     }
@@ -57,6 +58,9 @@ class TodosController: UITableViewController,TodoDelegate {
         cell?.setContent(projects_list[indexPath.section].todos[indexPath.row])
         NSLog("Cell at %i",indexPath.row)
         return cell!;
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return projects_list.count

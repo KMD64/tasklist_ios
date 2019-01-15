@@ -93,6 +93,7 @@
         UIBezierPath *boxPath = [UIBezierPath bezierPathWithRoundedRect:boxRect cornerRadius:checkbox.radius];
         CGContextSaveGState(context);
         [boxPath addClip];
+        //changed
         CGContextDrawLinearGradient(context, fillGradient, CGPointMake(0, (self.frame.size.height * kCheckVerticalExtension)), CGPointMake(0, self.frame.size.height), 0);
         CGContextRestoreGState(context);
         [strokeColor setStroke];
@@ -108,6 +109,7 @@
         //Do Nothing
     } else if (checkbox.checkState == M13CheckboxStateChecked) {
         [checkColor setFill];
+        
         [[checkbox getDefaultShape] fill];
     } else if (checkbox.checkState == M13CheckboxStateMixed) {
         UIBezierPath *mixedPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(checkbox.strokeWidth + ((boxRect.size.width - (.5 * self.frame.size.height)) * 0.5), (self.frame.size.height * .5) - ((0.09375 * self.frame.size.height) * .5), .5 * self.frame.size.height, 0.1875 * self.frame.size.height) cornerRadius:(0.09375 * self.frame.size.height)];
@@ -285,7 +287,11 @@
 - (UIBezierPath *)getDefaultShape
 {
     CGFloat height = [self heightForCheckbox];
+    CGFloat multiplier = 0.7;
+    CGFloat delta = height*(1-multiplier)/2;
+    
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
+    
     [bezierPath moveToPoint: CGPointMake((0.17625 * height), (0.368125 * height))];
     [bezierPath addCurveToPoint: CGPointMake((0.17625 * height), (0.46375 * height)) controlPoint1: CGPointMake((0.13125 * height), (0.418125 * height)) controlPoint2: CGPointMake((0.17625 * height), (0.46375 * height))];
     [bezierPath addLineToPoint: CGPointMake((0.4 * height), (0.719375 * height))];
@@ -298,7 +304,9 @@
     [bezierPath addLineToPoint: CGPointMake((0.26875* height), (0.368125 * height))];
     [bezierPath addCurveToPoint: CGPointMake((0.17625 * height), (0.368125 * height)) controlPoint1: CGPointMake((0.26875* height), (0.368125 * height)) controlPoint2: CGPointMake((0.221875* height), (0.318125* height))];
     [bezierPath closePath];
+    [bezierPath applyTransform:CGAffineTransformScale(CGAffineTransformMakeTranslation(delta*0.9,delta*1.6),multiplier,multiplier)];
     bezierPath.miterLimit = 0;
+    
     return bezierPath;
 }
 
@@ -424,6 +432,7 @@
 - (void)setCheckHeight:(CGFloat)checkHeight
 {
     _checkHeight = checkHeight;
+    
     [self layoutSubviews];
 }
 
