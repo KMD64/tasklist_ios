@@ -35,6 +35,7 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
             s.removeAttribute(NSStrikethroughStyleAttributeName,range: NSMakeRange(0,s.length))
     
         }
+        
         label_outlet.attributedText=s
         NSLog(Alamofire.request("https://maxwell-tasklist.herokuapp.com/update", method:.post, parameters: ["todo_id":id], encoding: JSONEncoding.default, headers: nil).response.debugDescription)
         
@@ -48,6 +49,9 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
         if todo.is_completed {
             checkbox_outlet.checkState = M13CheckboxStateChecked
             s.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0,s.length))
+        }
+        else{
+            checkbox_outlet.checkState=M13CheckboxStateUnchecked
         }
         label_outlet.attributedText=s
 
