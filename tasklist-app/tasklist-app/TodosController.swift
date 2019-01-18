@@ -47,8 +47,10 @@ class TodosController: UITableViewController,TodoDelegate {
     
     override func tableView(_ tableView:UITableView,viewForHeaderInSection section:Int)->UIView?{
         let header=tableView.dequeueReusableCell(withIdentifier: "header")
-        header?.textLabel?.text=projects_list[section].title.localizedCapitalized
-        header?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:16.0)
+
+        header?.textLabel?.text=projects_list[section].title.uppercased()
+        header?.textLabel?.font=UIFont(name: "OpenSans-Semibold", size: 14.0)
+        NSLog((header?.textLabel?.font.fontName)!)
         header?.textLabel?.textColor=UIColor(red: 1, green: 1, blue: 1, alpha: 0)
         return header
     }
@@ -73,7 +75,6 @@ class TodosController: UITableViewController,TodoDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //index request
-        
         Alamofire.request("https://maxwell-tasklist.herokuapp.com/").responseCollection{
             (request:DataResponse<[Project]>) in
             if let prj_list = request.result.value {
