@@ -12,8 +12,8 @@
 		CF1DD5A221EA767A00363D49 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1DD5A121EA767A00363D49 /* Colors.swift */; };
 		CF354B7721E198AA00904042 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */; };
 		CF4AD7BD21F24D4300E52AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4AD7BC21F24D4300E52AE1 /* Assets.xcassets */; };
-		CF4AD7BE21F24D7500E52AE1 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CFF4140821EA6BA700B1C496 /* fonts */; };
-		CF4AD7BF21F24D7500E52AE1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CFF4140921EA6BA700B1C496 /* images */; };
+		CF76018921F26EC4008353F1 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = CF76018721F26EC4008353F1 /* fonts */; };
+		CF76018A21F26EC4008353F1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CF76018821F26EC4008353F1 /* images */; };
 		CF77D80C21E230D1006A9FCE /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */; };
 		CFB451E221E9ECFE00538A3C /* TodoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */; };
 		CFC48D5621E0F0D800DE82EA /* tasklist_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC48D5521E0F0D800DE82EA /* tasklist_appTests.swift */; };
@@ -60,6 +60,8 @@
 		CF1DD5A121EA767A00363D49 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
 		CF4AD7BC21F24D4300E52AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF76018721F26EC4008353F1 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		CF76018821F26EC4008353F1 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
 		CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTextCell.swift; sourceTree = "<group>"; };
 		CFC48D3A21E0F0D800DE82EA /* tasklist-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tasklist-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,8 +80,6 @@
 		CFDD032921E1285B000F3FE1 /* M13Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13Checkbox.h; sourceTree = "<group>"; };
 		CFDD032A21E1285B000F3FE1 /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
 		CFDD96E521E1688300054DF3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CFF4140821EA6BA700B1C496 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
-		CFF4140921EA6BA700B1C496 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		E7CCC74266665D385526AF3F /* Pods-tasklist-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasklist-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tasklist-app/Pods-tasklist-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,9 +147,9 @@
 		CFC48D3C21E0F0D800DE82EA /* tasklist-app */ = {
 			isa = PBXGroup;
 			children = (
+				CF76018721F26EC4008353F1 /* fonts */,
+				CF76018821F26EC4008353F1 /* images */,
 				CF4AD7BC21F24D4300E52AE1 /* Assets.xcassets */,
-				CFF4140821EA6BA700B1C496 /* fonts */,
-				CFF4140921EA6BA700B1C496 /* images */,
 				CFDD032921E1285B000F3FE1 /* M13Checkbox.h */,
 				CFDD032A21E1285B000F3FE1 /* M13Checkbox.m */,
 				CFDD030A21E10254000F3FE1 /* tasklist-app-Bridging-Header.h */,
@@ -265,10 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4AD7BE21F24D7500E52AE1 /* fonts in Resources */,
-				CF4AD7BF21F24D7500E52AE1 /* images in Resources */,
 				CFDD96E621E1688300054DF3 /* Podfile in Resources */,
+				CF76018921F26EC4008353F1 /* fonts in Resources */,
 				CF4AD7BD21F24D4300E52AE1 /* Assets.xcassets in Resources */,
+				CF76018A21F26EC4008353F1 /* images in Resources */,
 				CFDD030621E10133000F3FE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -54,7 +54,7 @@ class TodoCell: UITableViewCell, M13CheckboxDelegate{
             checkbox_outlet.checkState=M13CheckboxStateUnchecked
         }
         label_outlet.attributedText=s
-
+        label_outlet.font=UIFont(name:"OpenSans",size:16.0)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
