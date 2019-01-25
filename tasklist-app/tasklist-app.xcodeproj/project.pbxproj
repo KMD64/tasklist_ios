@@ -17,6 +17,7 @@
 		CF354B7721E198AA00904042 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */; };
 		CF4AD7BD21F24D4300E52AE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4AD7BC21F24D4300E52AE1 /* Assets.xcassets */; };
 		CF77D80C21E230D1006A9FCE /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */; };
+		CF86F22421FAE97F00662DD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86F22321FAE97F00662DD5 /* Constants.swift */; };
 		CFB451E221E9ECFE00538A3C /* TodoTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */; };
 		CFC48D5621E0F0D800DE82EA /* tasklist_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC48D5521E0F0D800DE82EA /* tasklist_appTests.swift */; };
 		CFDD02FB21E1012A000F3FE1 /* AddTodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD02EF21E1012A000F3FE1 /* AddTodoController.swift */; };
@@ -67,6 +68,7 @@
 		CF354B7621E198AA00904042 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
 		CF4AD7BC21F24D4300E52AE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF77D80B21E230D1006A9FCE /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
+		CF86F22321FAE97F00662DD5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		CFB451E121E9ECFE00538A3C /* TodoTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTextCell.swift; sourceTree = "<group>"; };
 		CFC48D3A21E0F0D800DE82EA /* tasklist-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tasklist-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC48D5121E0F0D800DE82EA /* tasklist-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tasklist-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		CFC48D3C21E0F0D800DE82EA /* tasklist-app */ = {
 			isa = PBXGroup;
 			children = (
+				CF86F22321FAE97F00662DD5 /* Constants.swift */,
 				CF2B3C5021FACF8F00F8FF23 /* OpenSans-Light.ttf */,
 				CF2B3C5121FACF8F00F8FF23 /* OpenSans-Regular.ttf */,
 				CF2B3C5221FACF8F00F8FF23 /* OpenSans-Semibold.ttf */,
@@ -363,6 +366,7 @@
 				CFDD030421E1012A000F3FE1 /* TodosController.swift in Sources */,
 				CFDD032B21E1285B000F3FE1 /* M13Checkbox.m in Sources */,
 				CFDD030121E1012A000F3FE1 /* Project.swift in Sources */,
+				CF86F22421FAE97F00662DD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

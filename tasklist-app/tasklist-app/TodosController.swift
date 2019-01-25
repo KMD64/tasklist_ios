@@ -47,18 +47,17 @@ class TodosController: UITableViewController,TodoDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return Constants.height_caption
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return Constants.height_cell
     }
     
     override func tableView(_ tableView:UITableView,viewForHeaderInSection section:Int)->UIView?{
         let header=tableView.dequeueReusableCell(withIdentifier: "header")
         header?.textLabel?.text=projects_list[section].title.uppercased()
         header?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:14.0)
-        
         return header
     }
     

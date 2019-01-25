@@ -48,13 +48,13 @@ class AddTodoController: UITableViewController{
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 64
+        return Constants.height_caption
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section==0{
-            return 80
+            return Constants.height_textcell
         }
-        return 72
+        return Constants.height_cell
     }
     func createCaptionView(s:String)->UITableViewCell?{
         let cell=table_outlet.dequeueReusableCell(withIdentifier: "todo_label")
