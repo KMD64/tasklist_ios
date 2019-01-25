@@ -23,7 +23,6 @@ class AddTodoController: UITableViewController{
     }
     
     @IBAction func cancelButton(_ sender: AnyObject) {
-        
         dismiss(animated: true, completion:nil)
     }
     @IBAction func okButton(_ sender: AnyObject) {
@@ -59,8 +58,9 @@ class AddTodoController: UITableViewController{
     }
     func createCaptionView(s:String)->UITableViewCell?{
         let cell=table_outlet.dequeueReusableCell(withIdentifier: "todo_label")
-        cell?.textLabel?.text=s
-        cell?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:18.0)
+        cell?.textLabel?.text=s.uppercased()
+        cell?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:14.0)
+        
         
         return cell
     }

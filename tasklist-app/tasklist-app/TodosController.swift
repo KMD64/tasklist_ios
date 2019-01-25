@@ -58,7 +58,7 @@ class TodosController: UITableViewController,TodoDelegate {
         let header=tableView.dequeueReusableCell(withIdentifier: "header")
         header?.textLabel?.text=projects_list[section].title.uppercased()
         header?.textLabel?.font=UIFont(name:"OpenSans-Semibold",size:14.0)
-        header?.textLabel?.textColor=UIColor.black
+        
         return header
     }
     

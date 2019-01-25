@@ -23,23 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="header" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="54" id="7fk-3Y-fbm">
-                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="7fk-3Y-fbm" id="jOt-qY-5yR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.96855324506759644" green="0.96866911649703979" blue="0.96851390600204468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" header="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="UOr-zC-Wf6" customClass="TodoCell" customModule="tasklist_app" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="82" width="375" height="62"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="UOr-zC-Wf6" id="4KO-se-LfJ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
@@ -75,6 +62,15 @@
                                     <outlet property="label_outlet" destination="Qfh-0c-Kxa" id="akS-Ga-1Hu"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" id="cZk-h5-vyu">
+                                <rect key="frame" x="0.0" y="90" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cZk-h5-vyu" id="yKR-l9-pDQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97259086370000003" blue="0.97243505720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="KDo-o9-4T4" id="BqR-c7-OE3"/>
@@ -98,13 +94,13 @@
         <scene sceneID="9qW-F5-neY">
             <objects>
                 <navigationController id="cAh-H3-KmM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oK0-X4-vlD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oK0-X4-vlD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1992347538" green="0.68729680780000002" blue="0.85564380880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.1992347538" green="0.68729680780000002" blue="0.85564380880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                             <color key="textColor" red="0.99941492080688477" green="0.97675275802612305" blue="0.99462240934371948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -158,6 +154,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.9725908637046814" blue="0.97243505716323853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project2" rowHeight="58" id="ifC-ZP-L9M">
                                 <rect key="frame" x="0.0" y="145" width="375" height="58"/>
@@ -171,14 +168,14 @@
                         <sections/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Новая задача" id="4eU-ua-WHI">
-                        <barButtonItem key="leftBarButtonItem" image="backIcon.png" id="olt-70-I4J">
+                        <barButtonItem key="leftBarButtonItem" image="backIcon" id="olt-70-I4J">
                             <inset key="imageInsets" minX="0.0" minY="7" maxX="24" maxY="7"/>
                             <color key="tintColor" red="0.97247451539999996" green="0.97259086370000003" blue="0.97243505720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancelButton:" destination="5Wj-9D-nyo" id="JQf-qt-1nl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="done.png" id="Rdv-IB-Rdg">
+                        <barButtonItem key="rightBarButtonItem" image="done" id="Rdv-IB-Rdg">
                             <inset key="imageInsets" minX="40" minY="16" maxX="0.0" maxY="16"/>
                             <color key="tintColor" red="0.97247451539999996" green="0.97259086370000003" blue="0.97243505720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -192,18 +189,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kif-oN-rsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399.2" y="902.69865067466276"/>
+            <point key="canvasLocation" x="1425" y="947"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ptU-kB-0Cb">
             <objects>
                 <navigationController extendedLayoutIncludesOpaqueBars="YES" id="WeL-uy-1GC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hS6-c0-Ghi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hS6-c0-Ghi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.20000000000000001" green="0.68627450980392157" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                             <color key="textColor" red="0.99941492080688477" green="0.97675275802612305" blue="0.99462240934371948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="textShadowColor" red="0.79607843137254897" green="0.81586486101150513" blue="0.83135735988616943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -218,7 +215,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backIcon.png" width="45" height="30"/>
-        <image name="done.png" width="59" height="46"/>
+        <image name="backIcon" width="45" height="30"/>
+        <image name="done" width="59" height="46"/>
     </resources>
 </document>
